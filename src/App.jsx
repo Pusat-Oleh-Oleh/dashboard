@@ -24,6 +24,7 @@ import ArticleDetail from './pages/ArticleDetail';
 import NotificationManagement from './pages/NotificationManagement';
 import AdminProfile from './pages/AdminProfile';
 import BannerManagement from './pages/BannerManagement';
+import CourierManagement from './pages/CourierManagement';
 import Login from './pages/Login';
 import AdminRoute from './components/AdminRoute';
 
@@ -141,6 +142,12 @@ function App() {
         <Route path="/banner" element={
           <AdminRoute>
             <BannerManagement />
+          </AdminRoute>
+        } />
+
+        <Route path="/courier" element={
+          <AdminRoute>
+            <CourierManagement />
           </AdminRoute>
         } />
 

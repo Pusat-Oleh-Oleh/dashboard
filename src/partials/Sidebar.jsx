@@ -16,7 +16,8 @@ import {
   UserPlus,
   UserCog,
   LogOut,
-  Image
+  Image,
+  Truck
 } from 'lucide-react';
 
 import SidebarLinkGroup from "./SidebarLinkGroup";
@@ -303,6 +304,29 @@ function Sidebar({
                           <Ticket className={`shrink-0 h-4 w-4 ${pathname.includes("voucher") ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'}`} />
                           <span className="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                             Vouchers
+                          </span>
+                        </div>
+                      </NavLink>
+                    </React.Fragment>
+                  );
+                }}
+              </SidebarLinkGroup>
+
+              {/* Courier Management */}
+              <SidebarLinkGroup activecondition={pathname.includes("courier")}>
+                {(handleClick, open) => {
+                  return (
+                    <React.Fragment>
+                      <NavLink
+                        end
+                        to="/courier"
+                        className={`block text-gray-800 dark:text-gray-100 truncate transition duration-150 ${pathname.includes("courier") ? "" : "hover:text-gray-900 dark:hover:text-white"
+                          }`}
+                      >
+                        <div className="flex items-center">
+                          <Truck className={`shrink-0 h-4 w-4 ${pathname.includes("courier") ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'}`} />
+                          <span className="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                            Couriers
                           </span>
                         </div>
                       </NavLink>
